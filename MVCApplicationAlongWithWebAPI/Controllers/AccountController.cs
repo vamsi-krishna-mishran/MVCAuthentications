@@ -1,11 +1,17 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MVCApplicationAlongWithWebAPI.Models;
 using MVCApplicationAlongWithWebAPI.Repos;
 using Newtonsoft.Json;
+using System.Security.Claims;
 
 namespace MVCApplicationAlongWithWebAPI.Controllers
 {
+
+    [AllowAnonymous]
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
@@ -72,15 +78,29 @@ namespace MVCApplicationAlongWithWebAPI.Controllers
             {
                 return JsonConvert.SerializeObject(new { IsSuccess = 0, token = "" });
             }
-            var result = await _accountService.LogInAsync(model);
+            string result = await _accountService.LogInAsync(model);
             if (result==null)
             {
                 //return RedirectToAction("LogIn", new { IsSuccess = -1 });
                 return JsonConvert.SerializeObject(new { IsSuccess = 0,token="" });
             }
-            HttpContext.Session.SetString("_UserName", model.Email);
-            return JsonConvert.SerializeObject(new { IsSuccess = 1, token = result });
-            
+            else if(result == "success")
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name,model.Email),
+                    new Claim(ClaimTypes.Role,"user")
+                };
+                var identity=new ClaimsIdentity(claims);
+                var principle=new ClaimsPrincipal(identity);
+                var props = new AuthenticationProperties();
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,principle, props);
+                //HttpContext.Session.SetString("_UserName", model.Email);
+                return JsonConvert.SerializeObject(new { IsSuccess = 1, token = result });
+            }
+            return JsonConvert.SerializeObject(new { IsSuccess = 0, token = "" });
+            //return JsonConvert.SerializeObject(new { IsSuccess = 1, token = result });
+
         }
         public ViewResult SignUp(int IsOkay=0,string IsStatus="")
         {

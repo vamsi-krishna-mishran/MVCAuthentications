@@ -15,7 +15,7 @@ using System.Security.Claims;
 
 namespace MVCApplicationAlongWithWebAPI.Controllers
 {
-    //[Authorize]
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -160,7 +160,7 @@ namespace MVCApplicationAlongWithWebAPI.Controllers
             }
             
         }
-       // [Authorize]
+       [Authorize]
         public IActionResult Index(string? result=null)
         {
             ViewBag.result = result;

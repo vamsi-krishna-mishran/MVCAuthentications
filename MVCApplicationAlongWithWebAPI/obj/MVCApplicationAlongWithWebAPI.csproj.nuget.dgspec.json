@@ -49,6 +49,10 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
+            "Microsoft.AspNetCore.CookiePolicy": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"

@@ -5,13 +5,7 @@
     <title></title>
     <script type="text/javascript">
         $(document).ready(function () {
-            if(sessionStorage.getItem("logintoast")=="1"){
-                $("#logintoast").show();
-                setTimeout(function(){
-                    $("#logintoast").hide("slow")
-                },2000);
-                sessionStorage.removeItem("logintoast");
-            }
+            
             var ulEmployees = $('#ulEmployees');
             $("#signin").click(function () {
                 // Get the username & password from textboxes

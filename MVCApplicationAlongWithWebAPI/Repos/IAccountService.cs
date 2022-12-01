@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Tokens;
 using MVCApplicationAlongWithWebAPI.Models;
@@ -53,22 +55,35 @@ namespace MVCApplicationAlongWithWebAPI.Repos
                 //parameter1. email address, 2.password field, 3. auto login, 4. lock account after some attempts.
                 if (!result.Succeeded)
                     return null;
-                var authClaims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name,model.Email),
-                new Claim("password",model.Password),
-                new Claim(ClaimTypes.Role, "Administrator"),
-                new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            };
-                var authSignInKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_config["JWT:Secret"]));
-                var token = new JwtSecurityToken(
-                    issuer: _config["JWT:ValidIssuer"],
-                    audience: _config["JWT:ValidAudience"],
-                    expires: DateTime.Now.AddMinutes(Convert.ToDouble(_config["JWT:Expire"])),
-                    claims: authClaims,
-                    signingCredentials: new SigningCredentials(authSignInKey, SecurityAlgorithms.HmacSha256Signature)
-                    ); ;
-                return new JwtSecurityTokenHandler().WriteToken(token);//sending a token to authorize to sources.
+                //    var authClaims = new List<Claim>
+                //{
+                //    new Claim(ClaimTypes.Name,model.Email),
+                //    new Claim("password",model.Password),
+                //    new Claim(ClaimTypes.Role, "Administrator"),
+                //    new Claim(System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                //};
+                //    var authSignInKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(_config["JWT:Secret"]));
+                //    var token = new JwtSecurityToken(
+                //        issuer: _config["JWT:ValidIssuer"],
+                //        audience: _config["JWT:ValidAudience"],
+                //        expires: DateTime.Now.AddMinutes(Convert.ToDouble(_config["JWT:Expire"])),
+                //        claims: authClaims,
+                //        signingCredentials: new SigningCredentials(authSignInKey, SecurityAlgorithms.HmacSha256Signature)
+                //        ); ;
+                //    return new JwtSecurityTokenHandler().WriteToken(token);//sending a token to authorize to sources.
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, model.Email),
+                    new Claim(ClaimTypes.Role, "User"),
+                };
+                var claimsIdentity = new ClaimsIdentity(
+                    claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var authProperties = new AuthenticationProperties
+                {
+                    ExpiresUtc = DateTime.Now.AddMinutes(10),
+                };
+               
+                return "success";
             }
             catch(Exception e)
             {
