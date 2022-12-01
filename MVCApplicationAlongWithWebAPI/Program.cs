@@ -12,13 +12,7 @@ using MVCApplicationAlongWithWebAPI;
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 //builder.Services.AddControllersWithViews();
-builder.Services.AddMvc(options =>
-{
-    var policy = new AuthorizationPolicyBuilder()
-    .RequireAuthenticatedUser()
-    .Build();
-    options.Filters.Add(new AuthorizeFilter(policy));
-});
+builder.Services.AddMvc();
 builder.Services.AddScoped<IBooksRepository, BooksRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IEmailService, EmailService>();

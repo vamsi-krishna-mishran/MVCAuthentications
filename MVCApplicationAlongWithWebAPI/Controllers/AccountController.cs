@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MVCApplicationAlongWithWebAPI.Filters;
 using MVCApplicationAlongWithWebAPI.Models;
 using MVCApplicationAlongWithWebAPI.Repos;
 using Newtonsoft.Json;
@@ -65,6 +66,7 @@ namespace MVCApplicationAlongWithWebAPI.Controllers
             HttpContext.Session.Remove("_UserName");
             return View("LogIn");
         }
+        [Log]
         public IActionResult LogIn(int IsSuccess=0)
         {
             ViewBag.IsSuccess = IsSuccess;

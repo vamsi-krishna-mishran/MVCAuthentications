@@ -297,3 +297,6 @@ C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWit
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWithWebAPI\bin\Debug\net6.0\ZstdNet.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWithWebAPI\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWithWebAPI\bin\Debug\net6.0\Twilio.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWithWebAPI\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWithWebAPI\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\MVCApplicationAlongWithWebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
