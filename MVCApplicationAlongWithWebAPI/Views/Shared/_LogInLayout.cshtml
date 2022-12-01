@@ -1,0 +1,98 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <script src="~/lib/font-awesome/js/all.min.js"></script>
+    <style>
+        #getall:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        if (localStorage.getItem("token") != null) {
+            window.location.href = "/Home/Index";
+        }
+        $(document).ready(function () {
+            //if (window.location.href != 'https://localhost:44351/Account/LogIn') {
+            //if(localStorage.getItem("token")==null){
+            //    window.location.href="/Account/LogIn";
+            //}}
+            
+            $("#logout").click(function () {
+                localStorage.removeItem("token");
+                window.location.href = "/Account/LogIn";
+            });
+            $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+                $("#success-alert").slideUp(500);
+            });
+            $("#login").click(function () {
+                window.location.href = "/Account/LogIn";
+            });
+            $("#register").click(function () {
+                window.location.href = "/Account/SignUp";
+            });
+            $("#getall").click(function () {
+                $.ajax('/Books/GetBooks', {
+                    headers: {
+                        "Authorization": "Bearer " + localStorage.getItem("token")
+                    },
+                    success: function (data) {
+                        $("body").html(data)
+                    },
+                    error: function (error, status) {
+                        console.log(error);
+
+                        console.log("authentication failure");
+                        setTimeout(function () { window.location.href = "/Account/LogIn"; }, 5000);
+                        //window.location.href="/Account/LogIn";
+                    }
+                })
+            })
+        });
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="container" style="padding-bottom:50px">
+    <a id="toppage"></a>
+    <header class="fixed-top container" style="height:100px">
+        <!-- Image and text -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="/Home/Index">
+                <img src="~/images/favicon.ico.png" height="30" width="30" style="border-radius:40px" />
+                Books
+            </a>
+            <button type="button" class="btn btn-outline-primary mx-2" id="login">LogIn</button>
+            <button type="button" class="btn btn-secondary" id="register">Register</button>
+        </nav>
+    </header>
+    <hr />
+    <main role="main" class="mt-5">
+        
+            @RenderBody()
+        
+        
+    </main>
+    <footer class="bg-light text-center text-lg-start fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color:rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">Bookstore.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@RenderSection("scripts",false)
+</html>
+

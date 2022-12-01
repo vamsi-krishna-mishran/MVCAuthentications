@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+   
+}
+
+<html>
+    
+<head>
+    <style>
+        .row .card{
+            background-color:#f5f5f5;
+        }
+    </style>
+
+    </head>
+    <body>
+    <div class="jumbotron bg-gradient my-1 rounded-2" style="background:#f5f5f5">
+        <h1 class="display-4 text-center">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead text-center py-2">
+            <a class="btn btn-primary btn-lg" href="/Home/AllBooks" role="button">Explore All</a>
+        </p>
+    </div>
+    <div class="container my-1">
+        <div class="row" >
+            <div class="col-sm ">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">In Seach Of Lost Time</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go to Book</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">Ulyssess</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go to Book</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                        <h5 class="card-title">One Hundred years of Solitude</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go to Book</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm ">
+                <div class="card" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">In Seach Of Lost Time</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go to Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    @section scripts{
+        <script>
+            $(document).ready(function(){
+                //alert("doc ready");
+            $("#logout").click(function(){
+                localStorage.removeItem("token");
+                window.location.href="/Account/logIn";
+            })
+                
+            })
+        </script>
+    }
+</html>

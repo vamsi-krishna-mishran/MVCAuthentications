@@ -1,0 +1,32 @@
+﻿<div class="container-fluid">
+    <div class="row">
+        </div>
+    
+</div>
+
+<script>
+    function LoadBooks(){
+        $.ajax('/Books/GetBooks',{
+            headers:{
+                Authorization:'Bearer '+localStorage.getItem("token")
+            },
+            success:function(data){
+                data=JSON.parse(data).data;
+                for(let i=0;i<data.length;i++){
+                    //console.log(data[i])
+                    $(".row").append(`<div class='card col-md-6 col-lg-4   border-primary' id='${data[i].Id}'><img  src='${data[i].Img}'/></div>`)
+                }
+            },
+            error:function(error){
+                console.log("error");
+            },
+            complete:function(){
+               // console.log(localStorage.getItem("token"))
+            }
+        });
+       
+    };
+    $(document).ready(function(){
+        LoadBooks();
+    })
+</script>
