@@ -85,6 +85,6 @@ C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthenticati
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\System.Web.Http.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\libman.json
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\ManualUserAuthentication.staticwebassets.runtime.json
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\MySqlConnector.dll

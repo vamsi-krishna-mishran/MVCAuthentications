@@ -5,15 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(o =>
-            {
-                o.Cookie.Name = "name";
-                o.Cookie.Domain = "doamain";
-                o.SlidingExpiration = true;
-                o.ExpireTimeSpan =TimeSpan.FromMinutes(5);
-                
-            });
+
 
 var app = builder.Build();
 

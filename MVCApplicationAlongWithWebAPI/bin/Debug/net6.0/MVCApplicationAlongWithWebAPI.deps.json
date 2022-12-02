@@ -18,6 +18,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.10",
           "MySql.Data": "8.0.31",
+          "MySqlConnector": "2.2.1",
           "SD.LLBLGen.Pro.ORMSupportClasses": "5.9.2",
           "Twilio": "6.0.1"
         },
@@ -1603,6 +1604,14 @@
           "lib/net6.0/ZstdNet.dll": {
             "assemblyVersion": "1.4.5.0",
             "fileVersion": "1.4.5.0"
+          }
+        }
+      },
+      "MySqlConnector/2.2.1": {
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.1.0"
           }
         }
       },
@@ -3340,6 +3349,13 @@
       "sha512": "sha512-ZVcctmag6cX0DtDxWh3fhBlSdZfGHKIUIodl7QtjZKupSgbCT0X+bO1Faw/NfUR2VfoxB/L9WzLfeCvki65qVg==",
       "path": "mysql.data/8.0.31",
       "hashPath": "mysql.data.8.0.31.nupkg.sha512"
+    },
+    "MySqlConnector/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k5wwd56u2WoIVLxeKsUHl8WS27shGluK6yLwziAnJwERnMQ5TsAFHRpr6EKEfpLwGF+FwrbmJXUdCk9+EU7Wrw==",
+      "path": "mysqlconnector/2.2.1",
+      "hashPath": "mysqlconnector.2.2.1.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
