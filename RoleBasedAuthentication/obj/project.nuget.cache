@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jSz3r8wFKwRZnO0Eu9T2exqkPl09VAnUkkZ3cQGQw8sMI+MaIvX8Zw1nBjxHJ6yabwfFqYFHlRtnnPGvb6fQJA==",
+  "dgSpecHash": "0SXbdS7XQOO4Tx56RuRL4UHTTuHoZN9laDyKtmUqlYO5+l3Pk35tvLhViC18aS/3G/zn//21ybfPrbPpG5+/TA==",
   "success": true,
   "projectFilePath": "C:\\Users\\vamsi\\source\\repos\\MVCApplicationAlongWithWebAPI\\RoleBasedAuthentication\\RoleBasedAuthentication.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\vamsi\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",

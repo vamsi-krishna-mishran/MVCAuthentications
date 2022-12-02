@@ -89,6 +89,10 @@
               "target": "Package",
               "version": "[8.0.31, )"
             },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
             "SD.LLBLGen.Pro.ORMSupportClasses": {
               "target": "Package",
               "version": "[5.9.2, )"

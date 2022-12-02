@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MUuI7GH4EnityDPU9CQ19FU7c3QfXbALQbJtz342FNPMD30AZfcoyB7Wyfx+UdxfTRQ2tkF6HuUjeEX3U/o2hg==",
+  "dgSpecHash": "HdeZU2HtqMzbFYUH90OBNYz64vCRhUaNiDEwOLVN71W80+UBxZXfNAQoeaJhtZiWHDmFR4GKepmqSgOP/TO4zg==",
   "success": true,
   "projectFilePath": "C:\\Users\\vamsi\\source\\repos\\MVCApplicationAlongWithWebAPI\\MVCApplicationAlongWithWebAPI\\MVCApplicationAlongWithWebAPI.csproj",
   "expectedPackageFiles": [
@@ -100,6 +100,7 @@
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\mysql.data\\8.0.31\\mysql.data.8.0.31.nupkg.sha512",
+    "C:\\Users\\vamsi\\.nuget\\packages\\mysqlconnector\\2.2.1\\mysqlconnector.2.2.1.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\vamsi\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",

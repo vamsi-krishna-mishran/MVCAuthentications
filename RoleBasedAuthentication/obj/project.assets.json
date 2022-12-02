@@ -549,6 +549,19 @@
           }
         }
       },
+      "MySqlConnector/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -1165,6 +1178,33 @@
         "version.txt"
       ]
     },
+    "MySqlConnector/2.2.1": {
+      "sha512": "k5wwd56u2WoIVLxeKsUHl8WS27shGluK6yLwziAnJwERnMQ5TsAFHRpr6EKEfpLwGF+FwrbmJXUdCk9+EU7Wrw==",
+      "type": "package",
+      "path": "mysqlconnector/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net7.0/MySqlConnector.dll",
+        "lib/net7.0/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.2.1.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -1578,7 +1618,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.AspNetCore.Identity >= 2.2.0"
+      "Microsoft.AspNetCore.Identity >= 2.2.0",
+      "MySqlConnector >= 2.2.1"
     ]
   },
   "packageFolders": {
@@ -1629,6 +1670,10 @@
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[2.2.1, )"
           }
         },
         "imports": [

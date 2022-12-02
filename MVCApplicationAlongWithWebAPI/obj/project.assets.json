@@ -2188,6 +2188,19 @@
           "lib/net6.0/ZstdNet.dll": {}
         }
       },
+      "MySqlConnector/2.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -6988,6 +7001,33 @@
         "mysql.data.nuspec"
       ]
     },
+    "MySqlConnector/2.2.1": {
+      "sha512": "k5wwd56u2WoIVLxeKsUHl8WS27shGluK6yLwziAnJwERnMQ5TsAFHRpr6EKEfpLwGF+FwrbmJXUdCk9+EU7Wrw==",
+      "type": "package",
+      "path": "mysqlconnector/2.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/MySqlConnector.dll",
+        "lib/net461/MySqlConnector.xml",
+        "lib/net471/MySqlConnector.dll",
+        "lib/net471/MySqlConnector.xml",
+        "lib/net6.0/MySqlConnector.dll",
+        "lib/net6.0/MySqlConnector.xml",
+        "lib/net7.0/MySqlConnector.dll",
+        "lib/net7.0/MySqlConnector.xml",
+        "lib/netcoreapp3.1/MySqlConnector.dll",
+        "lib/netcoreapp3.1/MySqlConnector.xml",
+        "lib/netstandard2.0/MySqlConnector.dll",
+        "lib/netstandard2.0/MySqlConnector.xml",
+        "lib/netstandard2.1/MySqlConnector.dll",
+        "lib/netstandard2.1/MySqlConnector.xml",
+        "logo.png",
+        "mysqlconnector.2.2.1.nupkg.sha512",
+        "mysqlconnector.nuspec"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -11437,6 +11477,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
       "MySql.Data >= 8.0.31",
+      "MySqlConnector >= 2.2.1",
       "SD.LLBLGen.Pro.ORMSupportClasses >= 5.9.2",
       "Twilio >= 6.0.1"
     ]
@@ -11529,6 +11570,10 @@
           "MySql.Data": {
             "target": "Package",
             "version": "[8.0.31, )"
+          },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[2.2.1, )"
           },
           "SD.LLBLGen.Pro.ORMSupportClasses": {
             "target": "Package",

@@ -48,6 +48,10 @@
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
             }
           },
           "imports": [

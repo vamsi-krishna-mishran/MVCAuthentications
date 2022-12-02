@@ -27,6 +27,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
+    <PackageReference Include="MySqlConnector" Version="2.2.1" />
     <PackageReference Include="SD.LLBLGen.Pro.ORMSupportClasses" Version="5.9.2" />
     <PackageReference Include="Twilio" Version="6.0.1" />
   </ItemGroup>
