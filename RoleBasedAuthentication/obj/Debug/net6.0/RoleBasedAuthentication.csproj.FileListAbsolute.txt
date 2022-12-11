@@ -31,3 +31,10 @@ C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthenticatio
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\obj\Debug\net6.0\ref\RoleBasedAuthentication.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\System.Security.Permissions.dll
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\obj\Debug\net6.0\RoleBasedAuthentication.csproj.CopyComplete
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Humanizer.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\RoleBasedAuthentication\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll

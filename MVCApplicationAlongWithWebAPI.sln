@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCApplicationAlongWithWebA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManualUserAuthentication", "ManualUserAuthentication\ManualUserAuthentication.csproj", "{14B60355-51FE-4E8A-BA7D-764169B2BF53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleBasedAuthentication", "RoleBasedAuthentication\RoleBasedAuthentication.csproj", "{6D989A52-24C8-4991-9FC0-EE42C320B2AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoleBasedAuthentication", "RoleBasedAuthentication\RoleBasedAuthentication.csproj", "{6D989A52-24C8-4991-9FC0-EE42C320B2AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlPolemro", "MySqlPolemro\MySqlPolemro.csproj", "{4A90BD79-13BA-46E1-8920-7272A9F59129}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6D989A52-24C8-4991-9FC0-EE42C320B2AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D989A52-24C8-4991-9FC0-EE42C320B2AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D989A52-24C8-4991-9FC0-EE42C320B2AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A90BD79-13BA-46E1-8920-7272A9F59129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A90BD79-13BA-46E1-8920-7272A9F59129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A90BD79-13BA-46E1-8920-7272A9F59129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A90BD79-13BA-46E1-8920-7272A9F59129}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
