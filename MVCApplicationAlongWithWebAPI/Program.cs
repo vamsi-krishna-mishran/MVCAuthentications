@@ -34,6 +34,8 @@ builder.Services.AddHttpClient();//to insert httpclient middleware.which enables
 //builder.Services.AddDbContext<BooksContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDB")));
 builder.Services.AddDbContext<BooksContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDB")));
+builder.Services.AddDbContext<UserContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("UserDB")));
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<BooksContext>().AddDefaultTokenProviders();//it is adding identity 
 
 var app = builder.Build();

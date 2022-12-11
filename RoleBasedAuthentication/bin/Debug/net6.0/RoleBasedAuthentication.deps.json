@@ -9,6 +9,7 @@
       "RoleBasedAuthentication/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
           "MySqlConnector": "2.2.1"
         },

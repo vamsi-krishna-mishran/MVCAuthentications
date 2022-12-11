@@ -88,3 +88,9 @@ C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthenticati
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\libman.json
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\ManualUserAuthentication.staticwebassets.runtime.json
 C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\vamsi\source\repos\MVCApplicationAlongWithWebAPI\ManualUserAuthentication\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
