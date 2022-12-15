@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<MySqlConnection>(_ => new MySqlConnection(builder.Configuration["ConnectionStrings:Default"]));
 builder.Services.AddAuthentication("Basic")
     .AddScheme<BasicAuthenticationOptions, BasicAuthenticationHandler>("Basic", null);
+    
 //builder.Services.AddScoped<IBasicAuthenticationService, BasicAuthenticationHandler>();
 var app = builder.Build();
 

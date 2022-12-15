@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MySqlCon.Models;
 using MySqlConnector;
+using System.Data;
 using System.Diagnostics;
 
 namespace MySqlCon.Controllers
@@ -11,11 +12,13 @@ namespace MySqlCon.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private IConfiguration _config;
+        private MySqlConnection _obj;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration config)
+        public HomeController(ILogger<HomeController> logger, IConfiguration config,MySqlConnection obj)
         {
             _logger = logger;
-            _config = config;   
+            _config = config; 
+            _obj = obj;
         }
         //private static void InsertData()
         //{
@@ -80,15 +83,33 @@ namespace MySqlCon.Controllers
             var request = Request.HttpContext.User;
             using var connection = new MySqlConnection(_config["ConnectionStrings:Default"]);
             await connection.OpenAsync();
-
-            using var command = new MySqlCommand("SELECT * FROM Books;", connection);
-            using var reader = await command.ExecuteReaderAsync();
-            while (await reader.ReadAsync())
+            //
+            MySqlCommand cmd = new MySqlCommand("select * from Books", connection);
+           // cmd = new MySqlCommand("select Level from GetLoginDetails where BINARY UserName=@UserName and BINARY Password=@Password", con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Clear();
+           // cmd.Parameters.AddWithValue("@UserName", UserId);
+           // cmd.Parameters.AddWithValue("@Password", Password);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow row in dt.Rows)
             {
-                var value = reader.GetValue(0);
-                // do something with 'value'
-                Console.WriteLine(value);
+                string name = row["Id"].ToString();
+                string description = row["BookName"].ToString();
+                string icoFileName = row["AuthorName"].ToString();
+               // string installScript = row["installScript"].ToString();
             }
+            //
+
+            //using var command = new MySqlCommand("SELECT * FROM Books;", connection);
+            //using var reader = await command.ExecuteReaderAsync();
+            //while (await reader.ReadAsync())
+            //{
+            //    var value = reader;
+            //    // do something with 'value'
+            //    Console.WriteLine(value);
+            //}
 
             return View();
         }
@@ -103,6 +124,16 @@ namespace MySqlCon.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [AllowAnonymous]
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        public IActionResult LogInForbidden()
+        {
+            return View();
         }
     }
 }

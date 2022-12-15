@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
 using System.Security.Claims;
@@ -9,19 +10,22 @@ namespace MySqlCon.Context
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<BasicAuthenticationOptions>
     {
-        private const string AuthorizationHeaderName = "Authorizatioun";
+        private const string AuthorizationHeaderName = "Authorization";
         private const string BasicSchemeName = "Basic";
+        private readonly IConfiguration _config;
        // private readonly IBasicAuthenticationService _authenticationService;
 
         public BasicAuthenticationHandler(
             IOptionsMonitor<BasicAuthenticationOptions> options,
             ILoggerFactory logger,
             UrlEncoder encoder,
-            ISystemClock clock
+            ISystemClock clock,
+            IConfiguration config
             /*IBasicAuthenticationService authenticationService*/)
             : base(options, logger, encoder, clock)
         {
            // _authenticationService = authenticationService;
+           _config=config;
         }
 
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
@@ -35,7 +39,7 @@ namespace MySqlCon.Context
                 // return AuthenticateResult.NoResult();
 
                
-                return AuthenticateResult.Fail("Invalid Basic authentication header");
+                return AuthenticateResult.NoResult();
             }
 
             if (AuthenticationHeaderValue.TryParse(Request.Headers[AuthorizationHeaderName], out AuthenticationHeaderValue headerValue))
@@ -75,13 +79,19 @@ namespace MySqlCon.Context
 
         protected override async Task HandleChallengeAsync(AuthenticationProperties properties)
         {
-            Response.Headers["WWW-Authenticate"] = $"Basic realm=\"{Options.Realm}\", charset=\"UTF-8\"";
-            await base.HandleChallengeAsync(properties);
+            // Response.Headers["WWW-Authenticate"] = $"Basic realm=\"{Options.Realm}\", charset=\"UTF-8\"";
+           // Response.RedirectToAbsoluteUrl("https://localhost:7120/Home/LogIn");
+            Response.Redirect("/Home/LogIn");
+           // await base.HandleChallengeAsync(properties);
         }
         protected override async Task HandleForbiddenAsync(AuthenticationProperties properties)
         {
-            Response.Headers["WWW-Authenticate"] = $"Basic realm=\"{Options.Realm}\", charset=\"UTF-8\"";
-            await base.HandleChallengeAsync(properties);
+            // Response.Headers["WWW-Authenticate"] = $"Basic realm=\"{Options.Realm}\", charset=\"UTF-8\"";
+            //RedirectResult("/Home/LogIn");
+            //properties.RedirectUri = "https://localhost:7120/Home/LogIn";
+            // Response.RedirectToAbsoluteUrl("https://localhost:7120/Home/LogInForbidden");
+            Response.Redirect("/Home/LogIn");
+            //  await base.HandleChallengeAsync(properties);
         }
     }
 }
